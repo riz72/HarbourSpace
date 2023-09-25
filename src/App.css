@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 60px 1fr 0.8fr 0.8fr 0.5fr 0.8fr;
+  grid-template-areas: "header" "main" "section_1" "section_2" "section_3" "section_4" "footer";
+}
+
+.grid > .header {
+  grid-area: header;
+}
+
+.grid > .main {
+  grid-area: main;
+}
+
+.grid > .section_1 {
+  grid-area: section_1;
+}
+
+.grid > .section_2 {
+  grid-area: section_2;
+}
+
+.grid > .section_3 {
+  grid-area: section_3;
+}
+
+.grid > .section_4 {
+  grid-area: section_4;
+}
+
+.grid > .footer {
+  grid-area: footer;
+}

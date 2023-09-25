@@ -1,0 +1,7 @@
+.carousalcontainer {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  justify-content: center;
+  scroll-behavior: smooth;
+}

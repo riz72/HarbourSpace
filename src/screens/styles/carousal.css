@@ -1,0 +1,162 @@
+#carousal__section {
+  margin: auto;
+}
+
+#carousal__section > div > img {
+  position: absolute;
+  margin: auto;
+  width: 800px;
+  z-index: -1;
+  bottom: 0px;
+  right: 800px;
+}
+
+.arrow__container {
+  display: none;
+}
+
+.arrow {
+  width: 48px;
+  height: 48px;
+  left: 306px;
+  top: 4006px;
+  background: white;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 1000px;
+}
+
+.arrow:hover {
+  transform: scale(1.1);
+}
+
+.arrow:focus {
+  outline: 0;
+}
+
+.arrow__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.carousal__section-pattern {
+  position: relative;
+}
+
+.carousal__container {
+  z-index: 5;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: scroll;
+  justify-content: center;
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 675px) {
+  #carousal__section {
+    margin: 0 auto;
+    margin-top: 20%;
+  }
+  .carousal__container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    scroll-behavior: smooth;
+  }
+
+  .arrow__container {
+    margin-top: 4%;
+    margin-right: 10%;
+    display: flex;
+    padding: 5;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .arrow {
+    width: 48px;
+    height: 48px;
+    left: 306px;
+    top: 4006px;
+    margin-left: 3%;
+    background: white;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    border-radius: 1000px;
+  }
+
+  .arrow:hover {
+    transform: scale(1.1);
+  }
+
+  .arrow:focus {
+    outline: 0;
+  }
+
+  .arrow__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.movable {
+  width: 100px;
+  height: 40px;
+  background: #685dc5;
+  mix-blend-mode: normal;
+  position: absolute;
+  z-index: 999999999;
+  opacity: 0.9;
+  transform: translate(-50%, -50%);
+  border-radius: 29px;
+  pointer-events: none;
+  transition: background 0.5s;
+}
+
+.movable.active {
+  background: #685dc5;
+}
+
+.movable.active:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.movable.cursor-right:after {
+  content: "DRAG";
+}
+
+.movable.cursor-left:after {
+  content: "DRAG";
+}
+
+.sides {
+  position: relative;
+  background: lightblue;
+}
+
+.side-right,
+.side-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: transparent;
+  border: 0;
+  appearance: none;
+}
+
+.side-right {
+  right: 0;
+}
+.side-left {
+  left: 0;
+}

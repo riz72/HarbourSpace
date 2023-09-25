@@ -1,0 +1,41 @@
+.commitment__section-fulltime-contract-padding {
+  padding: 24px;
+}
+
+.commitment__section-fulltime-contract-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.145455px;
+  color: #685dc5;
+}
+
+.commitment__section-fulltime-contract-year {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.185714px;
+  color: #6a6a6a;
+}
+
+.commitment__section-fulltime-contract-desc {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.185714px;
+  color: #6a6a6a;
+}
+
+.commitment__section-fulltime-contract-border {
+  border-bottom: 1px solid #dadada;
+  padding: 24px;
+  margin-right: 90%;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,56 @@
+#button__section {
+}
+
+.button {
+  background-color: #fff;
+  width: 200px;
+  color: #685dc5;
+  cursor: pointer;
+  padding: 16px;
+  outline: none;
+  border: 1px solid #e6e6e6;
+  border-radius: 29px;
+  transition: height 2s ease;
+}
+
+.button__row {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.button__title {
+  margin: auto;
+  font-family: Apercu Pro;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+.button__icon {
+  transition: transform 0.6s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.button__content {
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+.button__list {
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  align-items: center;
+  list-style-type: none;
+}
+
+.button__text {
+  font-weight: 400;
+  font-size: 14px;
+}

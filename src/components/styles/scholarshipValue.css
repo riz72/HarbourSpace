@@ -1,0 +1,104 @@
+#commitment__section {
+  margin-top: 60px;
+  box-sizing: border-box;
+}
+.commitment {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.commitment__section-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.commitment__section-scholarshipValue {
+  width: 320px;
+  height: 510px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.commitment__section-scholarshipValue-container-tall {
+  padding: 9%;
+}
+
+.commitment__section-scholarshipValue-text {
+  height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.145455px;
+  color: #685dc5;
+}
+
+.commitment__section-scholarshipValue-euro {
+  position: absolute;
+  margin-top: 20px;
+  height: 34px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.436364px;
+  color: #535353;
+}
+
+.commitment__section-scholarshipValue-border {
+  border-bottom: 1px solid #dadada;
+  padding: 10%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.commitment__section-scholarshipValue-border-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 34px;
+}
+
+.commitment__section-scholarshipValue-paddingStipend {
+  padding: 34px;
+}
+
+.commitment__section-fulltime-contract {
+  width: 680px;
+  height: 178px;
+  left: 561px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 675px) {
+  .commitment__section-scholarshipValue {
+    width: 320px;
+    height: 510px;
+    background: #ffffff;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  .commitment__section-scholarshipValue-euro {
+    position: absolute;
+    margin-top: 20px;
+    height: 34px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.436364px;
+    color: #535353;
+  }
+}

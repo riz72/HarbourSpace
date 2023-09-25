@@ -1,0 +1,18 @@
+.faqmain__section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  margin-top: 0;
+  border-bottom: 1px solid #e6e6e6;
+  width: 80%;
+  padding: 1%;
+}
+
+.faqmain__paragraph {
+  height: 112px;
+  font-family: Apercu Pro;
+  font-weight: 500;
+  font-size: 48px;
+  color: #685dc5;
+}

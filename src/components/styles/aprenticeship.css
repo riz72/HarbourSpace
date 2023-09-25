@@ -1,0 +1,162 @@
+#aprenticeship_section {
+  margin: auto;
+  z-index: -10;
+}
+
+.aprenticeship {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.aprenticeship__left {
+  position: relative;
+  margin-left: 10%;
+}
+
+.aprenticeship__right-h3 {
+  height: 112px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.6px;
+  color: #685dc5;
+}
+
+.aprenticeship__right-p {
+  height: 160px;
+  left: 52.78%;
+  right: 13.96%;
+  top: 1258px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 32px;
+  /* or 145% */
+
+  letter-spacing: -0.33px;
+
+  color: #535353;
+}
+
+.aprenticeship__right {
+  margin: auto;
+  position: relative;
+  width: 20%;
+}
+
+.apprenticeship__image {
+  position: relative;
+}
+
+.apprenticeship__image-circle-container-img {
+  display: flex;
+  margin: auto;
+}
+
+.apprenticeship__image-student-container {
+  position: absolute;
+  top: 7%;
+  left: 7%;
+}
+
+.apprenticeship__image-student-container-img {
+  border-radius: 1000px;
+}
+
+/* tablet */
+
+@media only screen and (max-width: 675px) {
+  #aprenticeship_section {
+    margin: auto;
+    z-index: -10;
+  }
+
+  .aprenticeship {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .aprenticeship__left {
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+
+  .aprenticeship__left-responsive-color {
+    position: absolute;
+    width: 100%;
+    height: 501px;
+    top: 35%;
+    left: 0;
+    margin-top: 190px;
+    background: #685dc5;
+    z-index: -9999;
+  }
+  .aprenticeship__left-responsive-color-white {
+    position: absolute;
+    width: 80%;
+    height: 750px;
+    top: 0;
+    left: 10%;
+    margin-top: 180px;
+    background: #fff;
+    z-index: -9998;
+    border: 1px solid #e6e6e6;
+    border-radius: 0px 0px 4px 4px;
+    box-sizing: border-box;
+  }
+
+  .aprenticeship__right-h3 {
+    height: 112px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+
+    letter-spacing: -0.6px;
+
+    color: #685dc5;
+  }
+
+  .aprenticeship__right-p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 32px;
+
+    letter-spacing: -0.33px;
+
+    color: #535353;
+  }
+
+  .aprenticeship__right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+  }
+
+  .apprenticeship__image {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .apprenticeship__image-student-container-img {
+    border-radius: 1000px;
+  }
+
+  .backgroundColors {
+    position: relative;
+  }
+}

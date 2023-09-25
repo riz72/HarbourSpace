@@ -1,0 +1,51 @@
+.commitment__section-study-work-text {
+  height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.145455px;
+  color: #685dc5;
+}
+
+.commitment__section-study-work-hours {
+  height: 35px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.185714px;
+  color: #6a6a6a;
+}
+
+.commitment__section-study-work-hours-border {
+  border-bottom: 1px solid #dadada;
+  padding: 10%;
+  margin-left: 7%;
+  margin-right: 85%;
+}
+
+.commitment__section-study-work-padding {
+  padding: 15px;
+}
+
+.commitment__section-study-work-padding-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: #535353;
+}
+
+.commitment__section-study-work-commitment {
+  width: 320px;
+  height: 304px;
+  left: 921px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
