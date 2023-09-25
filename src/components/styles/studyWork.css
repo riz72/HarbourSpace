@@ -22,7 +22,6 @@
 
 .commitment__section-study-work-hours-border {
   border-bottom: 1px solid #dadada;
-  padding: 10%;
   margin-left: 7%;
   margin-right: 85%;
 }
@@ -42,10 +41,20 @@
 
 .commitment__section-study-work-commitment {
   width: 320px;
-  height: 304px;
+  height: max-content;
+  min-height: 275px;
   left: 921px;
   background: #ffffff;
   border: 1px solid #dadada;
   box-sizing: border-box;
   border-radius: 4px;
+}
+@media only screen and (max-width: 675px) {
+  .commitment__section-study-work-commitment{
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+    width: 85%;
+    margin-bottom: 4%;
+  }
 }

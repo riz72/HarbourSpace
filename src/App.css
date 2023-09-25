@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+/* @import 'bootstrap/dist/css/bootstrap.min.css'; */
 
 body {
   margin: 0;
@@ -10,6 +11,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden !important;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -20,7 +22,7 @@ code {
 
 .grid {
   display: grid;
-  grid-template-rows: 60px 1fr 0.8fr 0.8fr 0.5fr 0.8fr;
+  grid-template-rows: 60px 0.6fr 0.4fr 0.4fr 0.35fr 0.5fr 60px; 
   grid-template-areas: "header" "main" "section_1" "section_2" "section_3" "section_4" "footer";
 }
 
@@ -50,4 +52,15 @@ code {
 
 .grid > .footer {
   grid-area: footer;
+}
+.section_3
+{
+  min-width: -webkit-fill-available;
+}
+
+/* Media Query for screens up to 675px wide */
+@media (max-width: 675px) {
+  .grid {
+    grid-template-rows: 60px 0.6fr 0.4fr 1fr 0.5fr 0.5fr 60px;
+}
 }

@@ -1,6 +1,15 @@
 #button__section {
 }
 
+.button-list
+{
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  margin-left: 8%;
+  font-weight: 500;
+  color: #535353;
+}
 .button {
   background-color: #fff;
   width: 200px;

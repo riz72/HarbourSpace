@@ -7,10 +7,8 @@ import Faq from "./screens/Faq";
 
 import Commitment from "./screens/Commitment";
 import ViewportProvider from "./Providers/viewportProvider";
-
+import Imagecarousel from "./screens/Imagecarousel";
 import "./App.css";
-import Accordion from "./components/Accordion";
-
 export default function App() {
   return (
 
@@ -34,7 +32,7 @@ export default function App() {
           </section>
 
           <section className="section_3">
-            <Accordion />
+            <Imagecarousel />
           </section>
 
           <section className="section_4">

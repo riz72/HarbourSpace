@@ -3,7 +3,7 @@ import "./styles/fulltime.css";
 
 export default function FullTimeContract() {
   return (
-    <div className="commitment__section-fulltime-contract">
+    <div>
       <div className="commitment__section-fulltime-contract-padding">
         <p className="commitment__section-fulltime-contract-title">
           A full-time contract

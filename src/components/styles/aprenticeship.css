@@ -24,6 +24,7 @@
   line-height: 56px;
   letter-spacing: -0.6px;
   color: #685dc5;
+  margin-bottom: 25px;
 }
 
 .aprenticeship__right-p {
@@ -31,22 +32,21 @@
   left: 52.78%;
   right: 13.96%;
   top: 1258px;
-
   font-style: normal;
   font-weight: 300;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 32px;
   /* or 145% */
 
   letter-spacing: -0.33px;
-
+  
   color: #535353;
 }
 
 .aprenticeship__right {
-  margin: auto;
+  margin: 5% 15% 5% 15%;
   position: relative;
-  width: 20%;
+  width: 40%;
 }
 
 .apprenticeship__image {
@@ -81,7 +81,9 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-  }
+    position: absolute;
+    top: 220%;
+}
 
   .aprenticeship__left {
     display: flex;

@@ -11,6 +11,7 @@ export default function Button(props) {
   const content = useRef(null);
 
   function toggleButton() {
+    console.log(props.content)
     setActiveState(setActive === "" ? "active" : "");
     setHeightState(
       setActive === "active" ? "0px" : `${content.current.scrollHeight}px`
@@ -34,8 +35,11 @@ export default function Button(props) {
         >
           <div
             className="button__text"
-            dangerouslySetInnerHTML={{ __html: props.content }}
-          />
+          >
+              { props.content.map((item,i) => (
+              <div className="button-list"  key={i}>{item}</div>
+              ))}
+          </div>
         </div>
       </button>
     </div>

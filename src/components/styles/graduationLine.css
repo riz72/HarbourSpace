@@ -1,0 +1,26 @@
+.graduation-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.line{
+border: 0.5px solid #6a6a6a;
+margin: 20px 0;
+width: 150%;
+}
+.graduation-line h3{
+    color: #6a6a6a;
+    text-transform: uppercase;
+    font-size: 15px; 
+    font-weight: 500;
+    align-items: center;
+    
+}
+@media only screen and (max-width: 675px) {
+    .graduation-line{
+     margin-bottom: 8px;
+     width: 95%;
+    }
+  
+  }

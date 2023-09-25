@@ -2,7 +2,8 @@ import * as React from "react";
 import zeptolab from "../assets/zeptolab.png";
 import "./styles/interactionDesign.css";
 import stamp from "../assets/stamp.svg";
-
+import { useState, useEffect } from "react";
+import { fetchData } from "../components/services/getData.service";
 const InteractionBox = () => {
   return (
     <div>
@@ -10,13 +11,50 @@ const InteractionBox = () => {
         <img className="interaction__box-img" src={stamp} alt="stamp" />
       </div>
       <div className="interaction__box-title">
-        <h3>Interaction Design Apprenticeship</h3>
+        <div>Interaction Design Apprenticeship</div>
       </div>
     </div>
   );
 };
 
 export default function InteractionDesign() {
+  const [scholarshipLocation, setScholarshipLocation] = useState({});
+  const [scholarshipStartDate, setScholarshipStartDate] = useState("");
+  const [scholarshipEndDate, setScholarshipEndtDate] = useState("");
+  const [scholarshipDuration, setScholarshipDuration] = useState("");
+  const [description, setDescription] = useState("");
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  }
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const fetchedData = await fetchData();
+        setDescription(fetchedData.scholarship.description[0].data);
+        setScholarshipDuration(fetchedData.scholarship.duration);
+        setScholarshipLocation(fetchedData.scholarship.location);
+        const formattedStartDate = formatDate(
+          fetchedData.scholarship.scholarship_start_date
+        );
+        setScholarshipStartDate(formattedStartDate);
+        const formattedEndDate = formatDate(
+          fetchedData.scholarship.application_end_date
+        );
+        setScholarshipEndtDate(formattedEndDate);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    getData();
+    console.log("data", scholarshipLocation);
+  }, []);
   return (
     <div id="interaction__section">
       <div>
@@ -34,22 +72,24 @@ export default function InteractionDesign() {
                     A fully funded work-study program to launch your tech career
                   </h3>
                   <p className="interaction__box-positioning-rows-left-p">
-                    Harbour.Space has partnered with SCG to empower driven
-                    talent and eliminate the barriers to accessing exceptional
-                    education and career opportunities through a Masters
-                    Fellowship.
+                    {description}
                   </p>
 
-                  <p className="interaction__box-positioning-rows-left-p">
-                    Scholarship candidates will receive full financial support
-                    to complete their Masters program at Harbour.Space while
-                    gaining invaluable work experience through an internship
-                    with SCG, a leading company in the industry.
-                  </p>
+                  <div className="interaction__box-positioning-rows-left-event-wrapper">
+                    <p className="interaction__box-positioning-rows-left-event-wrapper-p">
+                      <strong>Position: </strong> Marketing Performance
+                    </p>
+
+                    <button className="interaction__box-positioning-rows-left-event-wrapper-button">
+                      <span className="interaction__box-positioning-rows-left-event-wrapper-button-text">
+                        Apply Now
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              <div className="interaction__box-positioning-rows-left-event-wrapper">
+              {/* <div className="interaction__box-positioning-rows-left-event-wrapper">
                 <p className="interaction__box-positioning-rows-left-event-wrapper-p">
                   <strong>Position: </strong> Marketing Performance
                 </p>
@@ -59,10 +99,10 @@ export default function InteractionDesign() {
                     Apply Now
                   </p>
                 </button>
-              </div>
+              </div> */}
             </div>
 
-            <div className="interaction__box-positioning-rows-right-relative-right">
+            <div className="interaction__box-positioning-rows-right-relative-right zeptolab__container-tallBox-bg">
               <div className="interaction__box-positioning-rows-right">
                 <div className="zeptolab__container">
                   <div className="zeptolab__container-box">
@@ -83,7 +123,7 @@ export default function InteractionDesign() {
 
                       <div>
                         <p className="zeptolab__container-powered-strong">
-                          <strong>Zeptolab</strong>
+                          Zeptolab
                         </p>
                       </div>
                     </div>
@@ -95,7 +135,7 @@ export default function InteractionDesign() {
                         Application closes in
                       </h3>
                       <p className="zeptolab__container-shortBox-p">
-                        6 Day : 22 Hrs : 56 Min : 13 Seg
+                        6 Day : 22 Hrs : 56 Min : 13 Sec
                       </p>
                     </div>
 
@@ -104,21 +144,26 @@ export default function InteractionDesign() {
                         <h3 className="zeptolab__container-tallBox-h3">
                           Location
                         </h3>
-                        <p className="zeptolab__container-tallBox-p">Bangkok</p>
-
-                        <h3 className="zeptolab__container-tallBox-h3">
-                          Start date
-                        </h3>
                         <p className="zeptolab__container-tallBox-p">
-                          30 June 2020
+                          {scholarshipLocation.name}
                         </p>
+                        <div className="startDate">
+                          <h3 className="zeptolab__container-tallBox-h3">
+                            Start date
+                          </h3>
+                          <p className="zeptolab__container-tallBox-p">
+                            {/* 30 June 2020 */} {scholarshipStartDate}
+                          </p>
+                        </div>
                       </div>
 
                       <div>
                         <h3 className="zeptolab__container-tallBox-h3">
                           Duration
                         </h3>
-                        <p className="zeptolab__container-tallBox-p">1 Year</p>
+                        <p className="zeptolab__container-tallBox-p">
+                          {scholarshipDuration} Year
+                        </p>
                         <p className="zeptolab__container-tallBox-p">
                           Full-Time
                         </p>
@@ -127,7 +172,7 @@ export default function InteractionDesign() {
                           End date
                         </h3>
                         <p className="zeptolab__container-tallBox-p">
-                          3 Aug 2020
+                          {/* 3 Aug 2020 */} {scholarshipEndDate}
                         </p>
                       </div>
                     </div>

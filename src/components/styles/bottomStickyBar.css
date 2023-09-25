@@ -1,13 +1,41 @@
 #bottomBar {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 20px;
+  padding: 20px;
+  justify-content: space-around;
+  background-color: white;
+  border: var(--gray-3) solid 1px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 5;
+}
+#property {
   display: flex;
-  justify-content: space-between;
-  background: #fff;
-  padding: 1.5em;
-  border: 1px solid #dadada;
+  flex-direction: column;
 }
 
+#title {
+  margin-bottom: 10px;
+  color: var(--gray-1);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#value {
+  color: var(--gray-2);
+  font-size: 12px;
+  font-weight: 400;
+}
 @media only screen and (max-width: 675px) {
   #bottomBar {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
     display: none;
+  }
+
+  span {
+    font-size: small;
   }
 }

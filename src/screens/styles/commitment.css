@@ -1,11 +1,12 @@
 #commitment__section {
-  margin: auto;
+  margin: 0;
 }
 
 .commitment__section-flex {
   display: flex;
   flex-direction: row;
   margin-right: 10px;
+  height: 424px;
 }
 
 .commitment__section-flex-2Boxes {
@@ -14,9 +15,15 @@
   justify-content: space-between;
 }
 
+.commitment__section-fulltime-contract-border {
+  border-bottom: 1px solid #dadada;
+  padding-top: 1px;
+  margin-right: 96%;
+  margin-bottom: 24px;
+}
 .commitment__section-fulltime-contract {
   width: 680px;
-  height: 178px;
+  height: 193px;
   left: 561px;
   background: #ffffff;
   border: 1px solid #dadada;
@@ -28,9 +35,9 @@
   margin-right: 20px;
 }
 
-.marginBottom {
-  margin-bottom: 20px;
-}
+/* .marginBottom {
+  margin-bottom: 10px;
+} */
 .lineRow {
   display: flex;
   flex-direction: row;
@@ -39,38 +46,46 @@
 }
 
 .line {
-  width: 100px;
+  width: 250px;
   border: 1px solid #dadada;
 }
 
 @media only screen and (max-width: 675px) {
+  .commitment__section{
+    justify-content: center;
+  }
   .commitment__section-flex {
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin-left: 10%;
+    margin-top: 0;
   }
 
   .commitment__section-flex-2Boxes {
+    top: 20%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   .commitment__section-fulltime-contract {
-    width: 320px;
+    width: 85%;
+    justify-content: center;
     height: 219px;
-    left: 561px;
-    background: #ffffff;
-    border: 1px solid #dadada;
-    box-sizing: border-box;
+    left: 0;
     border-radius: 4px;
+    
   }
-
+  
   .marginRight {
     margin-right: 20px;
   }
 
-  .marginBottom {
+  /* .marginBottom {
     margin-bottom: 20px;
+  } */
+
+  .line {
+    width: 80px;
   }
 }
